@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "566703717663",
+    "firebase_url": "https://kalezma-8746a.firebaseio.com",
+    "project_id": "kalezma-8746a",
+    "storage_bucket": "kalezma-8746a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:566703717663:android:aac211187fbe06c817c42a",
+        "android_client_info": {
+          "package_name": "com.example.kalezma"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "566703717663-gfctbsppjjpuo81qackirv9031qnqk0f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kalezma",
+            "certificate_hash": "c767d48008300a587a46fa29bfefc5fe9abc3b73"
+          }
+        },
+        {
+          "client_id": "566703717663-0d1um48lb14rhd06bsdub150lvn7klpj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB93BJPdOdcDS5192zCoBaW_Xptk_j8GAs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "566703717663-0d1um48lb14rhd06bsdub150lvn7klpj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

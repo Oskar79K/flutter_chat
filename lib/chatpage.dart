@@ -47,7 +47,7 @@ class _ChatPageState extends State<ChatPage> {
       ),
       body: StreamBuilder(
         stream: Firestore.instance
-            .collection('messages')
+            .collection('Chats')
             .document(groupChatId)
             .collection(groupChatId)
             .orderBy('timestamp', descending: true)
@@ -102,7 +102,7 @@ class _ChatPageState extends State<ChatPage> {
     if (msg.isNotEmpty) {
       print('thisiscalled $msg');
       var ref = Firestore.instance
-          .collection('messages')
+          .collection('Chats')
           .document(groupChatId)
           .collection(groupChatId)
           .document(DateTime.now().millisecondsSinceEpoch.toString());
@@ -119,6 +119,7 @@ class _ChatPageState extends State<ChatPage> {
 
       scrollController.animateTo(0.0,
           duration: Duration(milliseconds: 100), curve: Curves.bounceInOut);
+      textEditingController.clear();
     } else {
       print('Please enter some text to send');
     }
@@ -132,15 +133,17 @@ class _ChatPageState extends State<ChatPage> {
           right: ((doc['senderId'] == userID) ? 0 : 64)),
       child: Container(
         width: MediaQuery.of(context).size.width,
+        height: 40.0,
         padding: const EdgeInsets.all(8.0),
         decoration: BoxDecoration(
             color: ((doc['senderId'] == userID)
                 ? Colors.grey
                 : Colors.greenAccent),
             borderRadius: BorderRadius.circular(8.0)),
-        child: (doc['tyoe'] == 'text')
-            ? Text('${doc['content']}')
-            : Image.network(doc['content']),
+        child: Text('${doc['content']}', style: TextStyle(fontSize: 14.0)),
+        // child: (doc['tyoe'] == 'text')
+        //     ? Text('${doc['content']}', style: TextStyle(fontSize: 14.0))
+        //     : Image.network(doc['content']),
       ),
     );
   }
